@@ -1,0 +1,23 @@
+package my.plugins.pierwszyplugin;
+
+import org.bukkit.plugin.java.JavaPlugin;
+
+public final class PierwszyPlugin extends JavaPlugin {
+
+    @Override
+    public void onEnable() {
+        // Plugin startup logic
+        System.out.println("z3go plugin v0.1 Started! Enjoy your time!");
+
+        getServer().getPluginManager().registerEvents(new JoinLeaveListener(), this);
+
+
+    }
+
+    @Override
+    public void onDisable() {
+        // Plugin shutdown logic
+        System.out.println("My first plugin has stopped!! Goodbye!!");
+
+    }
+}
